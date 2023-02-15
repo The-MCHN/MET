@@ -1,6 +1,6 @@
-install.packages("worldfootballR")
-
-mapped_players <- player_dictionary_mapping()
+# install.packages("worldfootballR")
+#
+# mapped_players <- player_dictionary_mapping()
 
 START.YEAR <- 2022
 
@@ -53,7 +53,7 @@ all_tables <- rbind(ekstraklasa_players, czech_I, slovakia_I, hung_I, austr_I, s
 
 df <-data.frame(all_tables)
 
-write.csv(all_tables, "C:\\Users\\wmachon\\DataspellProjects\\MiddleEuropeanTalents\\data.csv", row.names=FALSE)
+write.csv(all_tables, "C:\\Users\\wmachon\\DataspellProjects\\MiddleEuropeanTalents\\data\\data.csv", row.names=FALSE)
 
 players_bios <- tm_player_bio(all_tables$player_url)
-write.csv(players_bios, "C:\\Users\\wmachon\\DataspellProjects\\MiddleEuropeanTalents\\players_bio_data.csv", row.names=FALSE)
+write.csv(players_bios, "C:\\Users\\wmachon\\DataspellProjects\\MiddleEuropeanTalents\\data\\players_bio_data.csv", row.names=FALSE)
